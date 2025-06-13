@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; 
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2b559a, #3b0667);
+    padding: 10px;
+}
+.toDo-app {
+    width: 100%;
+    max-width: 560px;
+    background: #ffffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.toDo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center; 
+}
+
+.toDo-app h2 img {
+    width: 52px; 
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 11px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #edeef0;
+    padding: 10px;
+    font-weight: 800;
+}
+
+input:focus {
+    background-color: #edeef0;
+    color: black;
+}
+
+/* My Mentor Teach to me */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #edeef0 inset !important;
+    -webkit-text-fill-color: black !important;
+    font-weight: 800 !important;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 43px;
+    background: #e70404;
+    color: #ffffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.4s;
+}
+
+button:hover{
+    background: green;
+}
+
+ul li {
+    list-style: none;
+    font-size: 19px;
+    padding: 12px 8px 12px 51px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/uncheck.png);
+    background-size: 23px;
+    background-repeat:no-repeat;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url(images/check.png);
+    background-size: 29px;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #f0eded;
+}
